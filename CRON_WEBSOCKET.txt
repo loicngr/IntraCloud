@@ -1,0 +1,1 @@
+0 6 * * * /home/intracloud/intracloud/script_check_websocket.sh >/dev/null 2>&1

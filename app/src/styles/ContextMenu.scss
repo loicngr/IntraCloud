@@ -1,0 +1,95 @@
+/**
+ *
+ * Style pour le menu contextuel dans les tableaux
+ *
+*/
+
+
+span[data-table='nom'] {
+	position: relative;
+	top: 0;
+}
+
+.tooltip {
+	background: #333;
+	color: white;
+
+	word-break: normal !important;
+
+	font-weight: bold;
+	padding: 4px 8px;
+	font-size: 13px;
+	border-radius: 4px;
+
+	display: none;
+
+	position: absolute;
+	left: 70px;
+
+	z-index: 5;
+
+	&[data-show] {
+		display: block;
+	}
+
+	&[data-popper-placement^='top'] > .arrow {
+		bottom: -4px;
+	}
+
+	&[data-popper-placement^='bottom'] > .arrow {
+		top: -4px;
+	}
+
+	&[data-popper-placement^='left'] > .arrow {
+		right: -4px;
+	}
+
+	&[data-popper-placement^='right'] > .arrow {
+		left: -4px;
+	}
+
+	.arrow {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		z-index: -1;
+
+		&::before {
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			z-index: -1;
+
+			content: '';
+			transform: rotate(45deg);
+			background: #333;
+		}
+	}
+
+	button {
+		width: 100%;
+
+		background-color: transparent;
+		border: 0;
+		color: white;
+		transition: all 0.2s ease-in-out;
+
+		&:not(:last-of-type) {
+			&::after {
+				height: 2px;
+				width: 100%;
+
+				content: '';
+				display: block;
+				background-color: var(--color-main-white-05);
+
+				margin-top: 10px;
+			}
+		}
+
+		&:hover {
+			color: var(--color-main-white-05);
+		}
+	}
+}
+

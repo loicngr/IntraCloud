@@ -1,0 +1,6 @@
+api/.env.test
+api/node_modules/
+api/package-lock.json
+app/package-lock.json
+*/.history
+api/src/Migrations/*

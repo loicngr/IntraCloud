@@ -1,0 +1,60 @@
+/*
+ * Menu déroulant dans le tableau des utilisateurs pour sélectionner un rôle
+*/
+
+.dropdown-check-list {
+	display: inline-block;
+
+	span {
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		padding: 5px 50px 5px 10px;
+
+		&:after {
+			content: "";
+
+			position: absolute;
+			right: 10px;
+			top: 20%;
+
+			border-left: 2px solid black;
+			border-top: 2px solid black;
+			padding: 5px;
+
+			-moz-transform: rotate(-135deg);
+			-ms-transform: rotate(-135deg);
+			-o-transform: rotate(-135deg);
+			-webkit-transform: rotate(-135deg);
+
+			transform: rotate(-135deg);
+		}
+
+		&:active:after {
+			right: 8px;
+			top: 21%;
+		}
+	}
+
+	ul {
+		padding: 2px;
+		display: none;
+		margin: 0;
+
+		li {
+			list-style: none;
+
+			display: flex;
+
+			input {
+				margin-top: 5px !important;
+			}
+
+			label {
+				font-size: .7rem;
+			}
+		}
+	}
+}
+
+

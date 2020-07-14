@@ -1,0 +1,128 @@
+#firstLaunch {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: rgba(7, 7, 7, 0.45);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+div {
+	width: 250px;
+	height: auto;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-color: var(--color-main-gray);
+	color: var(--color-main-white);
+	padding: 10px;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+
+	z-index: 9999;
+
+	.arrow {
+		width: 8px;
+		height: 8px;
+
+		position: absolute;
+		z-index: -1;
+
+		&::before {
+			width: 8px;
+			height: 8px;
+
+			position: absolute;
+			z-index: -1;
+
+			content: '';
+			transform: rotate(45deg);
+			background-color: var(--color-main-white);
+		}
+	}
+
+	h3 {
+		padding: 0;
+		margin: 0;
+	}
+
+	button {
+		width: 100%;
+
+		font-family: 'Montserrat Bold';
+		font-weight: bold;
+		color: var(--color-main-gray);
+
+		margin-top: 1rem;
+		padding: 0.75rem 1rem;
+		border: none;
+
+		background-color: var(--color-main-white);
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			color: var(--color-main-blue);
+		}
+	}
+
+	&#leftNavbar_Navigation {
+		position: absolute;
+		top: 35vh;
+		left: 100px;
+
+		.arrow {
+			left: 0;
+
+			&::before {
+				left: -4px;
+			}
+		}
+	}
+
+	&#page_home_server_connection {
+		position: absolute;
+		top: 20vh;
+		left: 30vw;
+
+		.arrow {
+			top: 0;
+
+			&::before {
+				top: -4px;
+			}
+		}
+	}
+
+	&#page_home_server_tips_folder {
+		position: absolute;
+		top: 25vh;
+		left: 35vw;
+	}
+
+	&#page_home_server_tips_contextMenu {
+		position: absolute;
+		top: 25vh;
+		left: 35vw;
+	}
+
+	&#page_home_page_help {
+		position: absolute;
+		top: 10vh;
+		left: calc(99vw - 250px);
+
+		.arrow {
+			&::before {
+				top: -4px;
+				right: -195px;
+			}
+		}
+	}
+}

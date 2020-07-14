@@ -1,0 +1,66 @@
+/**
+ *
+ * Style pour les variables global
+ *      -   Gestion du thème dark
+ *
+*/
+
+body {
+	--navbar-top-height: 70px;
+	--navbar-left-width: 70px;
+	--navbar-left-icon-margin-top: 40px;
+	--navbar-left-border-width: 1.5px;
+
+	--color-text-white: #f0f1f2;
+	--color-main-blue: #1833ff;
+	--color-main-blue-07: #1833ffbd;
+	--color-main-black: #000000;
+	--color-main-white: #f0f1f2;
+	--color-main-white-05: rgba(240, 241, 242, 0.51);
+	--color-main-gray: #9b9caa;
+	--color-main-gray-05: #9b9caa7e;
+	--color-main-red: #f25e5e;
+	--color-main-green: #41cb19;
+	--color-main-green-05: rgba(65, 203, 25, 0.54);
+
+	--color-white: white;
+	--color-black: black;
+	--color-text-blue: #1833ff;
+
+	--navbar-color-bg: white;
+	--navbar-left-color-icon: #9b9caa;
+
+	--notification-color-bg: #7276AA;
+
+	--color-home-server-bg: white;
+	--color-home-server-item: #4558ee;
+}
+
+body {
+	&[data-theme='dark'] {
+		--color-main-white: #4f5b6f;
+		--color-white: black;
+		--color-black: white;
+
+		--navbar-color-bg: #5d6571;
+		--navbar-left-color-icon: #caced8;
+
+		--color-text-blue: white;
+	}
+
+	&[data-server-theme='v1'] {
+		--color-home-server-item: #4558ee;
+	}
+
+	&[data-server-theme='v2'] {
+		--color-home-server-item: rgb(167, 167, 172);
+	}
+
+	&[data-theme='dark'], &[data-server-theme='v1'] {
+		--color-home-server-bg: white;
+	}
+
+	&[data-theme='dark'], &[data-server-theme='v2'] {
+		--color-home-server-bg: #5d6571;
+	}
+}
