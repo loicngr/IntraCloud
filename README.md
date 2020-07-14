@@ -2,6 +2,10 @@
 
 A secure and fast way to upload and downlaod files on servers.
 
+# Developement
+- Api (Symfony 5)
+- Ui / App (VueJs)
+
 # Demo
 
 ![](https://i.imgur.com/Abpa6H1.gif)
